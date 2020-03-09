@@ -1,0 +1,44 @@
+var data = {
+    "food": [
+        {
+            "header": "Breakfast Buffet",
+                "classes": "breakfast lunch dinner",
+                    "img": "breakfast_buffet_1.jpg",
+                        "price": "17.00",
+                            "para_1": ["aloo", " Bhaja", "tomato"],
+                                "para_2": ["aloo", " Bhaja", "tomato"],
+                                    "para_3": ["aloo", " Bhaja", "tomato"]
+
+        },
+        {
+            "header": "Aloo Bhaja",
+                "classes": "breakfast lunch dinner",
+                    "img": "breakfast_lunch_dinner_alu_bhaja.jpg",
+                        "price": "17.00",
+                            "para_1": ["Potato", " Onion", "Fry"],
+                                "para_2": ["aloo", " Bhaja", "tomato"],
+                                    "para_3": []
+
+        },
+        {
+            "header": "Aloo Bhaja Halwa",
+                "classes": "breakfast",
+                    "img": "breakfast_lunch_dinner_alu_bhaja_halwa.jpg",
+                        "price": "17.00",
+                            "para_1": ["Potato", " Onion", "Fry"],
+                                "para_2": ["aloo", " Bhaja", "tomato"],
+                                    "para_3": ["Halwa"]
+
+        },
+        {
+            "header": "Beef Koliza",
+                "classes": "breakfast lunch dinner",
+                    "img": "beef-koliza-lunch-dinner-breakfast.jpg",
+                        "price": "17.00",
+                            "para_1": ["Beef", " Onion", "Fry"],
+                                "para_2": ["Spices", " Bhaja", "tomato"],
+                                    "para_3": ["beef"]
+
+        }
+]
+}

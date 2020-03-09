@@ -3,7 +3,7 @@
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
 <!--[if gt IE 8]><!-->
-<html class="no-js" lang="en">
+<html class="no-js" lang="en" ng-app="mainApp">
 <!--<![endif]-->
 
 <head>
@@ -14,7 +14,7 @@
     <meta name="description" content="Dawat Restaurant is a simple restaraunt website for restaurant business" />
     <meta name="keywords" content="restaurant, pizza, burger, business, house, online, delevery, html, coffee, cafe, bar" />
     <meta name="author" content="BDEXPERT" />
-    
+
     <!--====== TITLE TAG ======-->
     <title>Home Dawat Restaurant</title>
 
@@ -44,7 +44,54 @@
 </head>
 
 <body>
+    <script>
+        var data = {
+            "food": [
+        {
+            "header": "Breakfast Buffet",
+                "classes": "breakfast lunch dinner",
+                    "img": "breakfast_buffet_1.jpg",
+                        "price": "17.00",
+                            "para_1": ["aloo", " Bhaja", "tomato"],
+                                "para_2": ["aloo", " Bhaja", "tomato"],
+                                    "para_3": ["aloo", " Bhaja", "tomato"]
 
+        },
+        {
+            "header": "Aloo Bhaja",
+                "classes": "breakfast lunch dinner",
+                    "img": "breakfast_lunch_dinner_alu_bhaja.jpg",
+                        "price": "17.00",
+                            "para_1": ["Potato", " Onion", "Fry"],
+                                "para_2": ["aloo", " Bhaja", "tomato"],
+                                    "para_3": []
+
+        },
+        {
+            "header": "Aloo Bhaja Halwa",
+                "classes": "breakfast",
+                    "img": "breakfast_lunch_dinner_alu_bhaja_halwa.jpg",
+                        "price": "17.00",
+                            "para_1": ["Potato", " Onion", "Fry"],
+                                "para_2": ["aloo", " Bhaja", "tomato"],
+                                    "para_3": ["Halwa"]
+
+        },
+        {
+            "header": "Beef Koliza",
+                "classes": "breakfast lunch dinner",
+                    "img": "beef-koliza-lunch-dinner-breakfast.jpg",
+                        "price": "17.00",
+                            "para_1": ["Beef", " Onion", "Fry"],
+                                "para_2": ["Spices", " Bhaja", "tomato"],
+                                    "para_3": ["beef"]
+
+        }
+]
+        }
+    </script>
+    <script src="js/angular.min.js"></script>
+    <script src="js/logic.js"></script>
     <!--[if lt IE 8]>
         <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -132,20 +179,37 @@
         <!--HHOME SLIDER AREA-->
         <div class="slider-area">
             <div class="pogoSlider">
-                <div class="pogoSlider-slide" data-transition="fade" data-duration="1500" style="background:url(img/slider/slide_1.jpg) no-repeat scroll 0 0 / cover;">
-                    <h2 class="pogoSlider-slide-element" data-in="slideDown" data-out="flipX" data-duration="700">Welcome to</h2>
-                    <h1 class="pogoSlider-slide-element" data-in="expand" data-out="flipX" data-duration="1500"><span>Dawat</span> Cafe & Restaurant</h1>
-                    <h3 class="pogoSlider-slide-element" data-in="slideUp" data-out="flipX" data-duration="700"><a  href="#reservation-form-modal" data-toggle="modal">Reservation Now</a></h3>
+                <div class="pogoSlider-slide" data-transition="fade" data-duration="1500" style="background:url(img/slider/kola_1.jpg) no-repeat scroll 0 0 / cover;">
+                    <h2 class="pogoSlider-slide-element" data-in="slideDown" data-out="flipX" data-duration="700">Welcome
+                        to</h2>
+                    <h1 class="pogoSlider-slide-element" data-in="expand" data-out="flipX" data-duration="1500"><span>Dawat</span>
+                        Cafe & Restaurant</h1>
+                    <h3 class="pogoSlider-slide-element" data-in="slideUp" data-out="flipX" data-duration="700"><a href="#reservation-form-modal"
+                            data-toggle="modal">Reservation Now</a></h3>
                 </div>
-                <div class="pogoSlider-slide" data-transition="fade" style="background:url(img/slider/slide_2.jpg) no-repeat scroll 0 0 / cover;">
-                    <h2 class="pogoSlider-slide-element" data-in="slideDown" data-out="flipX" data-duration="700">Our menus</h2>
-                    <h1 class="pogoSlider-slide-element" data-in="expand" data-out="flipX" data-duration="1500">See What's <span>new</span> today</h1>
-                    <h3 class="pogoSlider-slide-element" data-in="slideUp" data-out="flipX" data-duration="700"><a href="#menu">Todays Menu</a></h3>
+                <div class="pogoSlider-slide" data-transition="fade" style="background:url(img/slider/kola_2.jpg) no-repeat scroll 0 0 / cover;">
+                    <h2 class="pogoSlider-slide-element" data-in="slideDown" data-out="flipX" data-duration="700">Our
+                        menus</h2>
+                    <h1 class="pogoSlider-slide-element" data-in="expand" data-out="flipX" data-duration="1500">See
+                        What's <span>new</span> today</h1>
+                    <h3 class="pogoSlider-slide-element" data-in="slideUp" data-out="flipX" data-duration="700"><a href="#menu">Todays
+                            Menu</a></h3>
                 </div>
-                <div class="pogoSlider-slide" data-transition="fade" style="background:url(img/slider/slide_3.jpg) no-repeat scroll 0 0 / cover;">
-                    <h2 class="pogoSlider-slide-element" data-in="slideDown" data-out="flipX" data-duration="700">Get ready</h2>
-                    <h1 class="pogoSlider-slide-element" data-in="expand" data-out="flipX" data-duration="1500">to <span>Join</span> with us</h1>
-                    <h3 class="pogoSlider-slide-element" data-in="slideUp" data-out="flipX" data-duration="700"><a  href="#reservation-form-modal" data-toggle="modal">Book A Table</a></h3>
+                <div class="pogoSlider-slide" data-transition="fade" style="background:url(img/slider/kola_3.jpg) no-repeat scroll 0 0 / cover;">
+                    <h2 class="pogoSlider-slide-element" data-in="slideDown" data-out="flipX" data-duration="700">Get
+                        ready</h2>
+                    <h1 class="pogoSlider-slide-element" data-in="expand" data-out="flipX" data-duration="1500">to
+                        <span>Join</span> with us</h1>
+                    <h3 class="pogoSlider-slide-element" data-in="slideUp" data-out="flipX" data-duration="700"><a href="#reservation-form-modal"
+                            data-toggle="modal">Book A Table</a></h3>
+                </div>
+                <div class="pogoSlider-slide" data-transition="fade" style="background:url(img/slider/kola_4.jpg) no-repeat scroll 0 0 / cover;">
+                    <h2 class="pogoSlider-slide-element" data-in="slideDown" data-out="flipX" data-duration="700">Get
+                        ready</h2>
+                    <h1 class="pogoSlider-slide-element" data-in="expand" data-out="flipX" data-duration="1500">to
+                        <span>Join</span> with us</h1>
+                    <h3 class="pogoSlider-slide-element" data-in="slideUp" data-out="flipX" data-duration="700"><a href="#reservation-form-modal"
+                            data-toggle="modal">Book A Table</a></h3>
                 </div>
             </div>
         </div>
@@ -165,12 +229,16 @@
                 </div>
                 <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
                     <div class="about-content">
-                        <p><span class="big-text">M</span> enc non elit libero. Quisque massa porta ut placerat lentesque non diam. Nam convallis porta rhoncus. Maecenas varius eget turpis suscipit porta sapien tinc Mauris tempor libero fringilla orci vivrra faucibue fringilla orci vivrra faucibus. Integer ullamcorper erat in tellus efficitur, quis porta sapien tincidunt. Nunc mattis lectus sed semper semper. </p>
+                        <p><span class="big-text">K</span> Kolapata Restaurant began May, 2019 in the city of Toronto.
+                            Focusing on the goals of "Quality, Healthy and Tradition" the restaurant is family
+                            operation making in our own kitchens.</p>
                     </div>
                 </div>
                 <div class="col-md-6 col-lg-6 col-sm-12 col-xs-12">
                     <div class="right-about-content">
-                        <p>Quisque sit amet turpis et ipsum elementum facilisis. Quisque sed placerat libero. Pellentesque nec tellus sollicitudin, sollicitudin ligula non, tristique nibh Donec vitae turpis sagittis, cursus nunc ac, aliquet nunc. Donec viverra vel massa at posuere. Aliquam et fringilla augue consequat posuere sem, eu ornares viverra veleso massa at posuere. Aliquam et fringilla augue</p>
+                        <p>Kolapata Restaurant has two generation of family member working together to fulfill the idea
+                            "Honor the Customer, Quality Comes Frist". Through hard work and dedication, Kolapata
+                            Restaurant began its name the idea of authentic traditional Asian culture food.</p>
                     </div>
                 </div>
                 <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
@@ -198,32 +266,32 @@
                 <div class="menu-discount-offer col-md-12 col-lg-12 col-sm-12 col-xs-12">
                     <div class="single-promotions">
                         <div class="promotions-img">
-                            <img src="img/promotions/promo_slide_1.jpg" alt="">
+                            <img src="img/promotions/promo_kola_1.jpg" alt="">
                         </div>
                         <div class="promotions-details">
-                            <h3>40% off for 9'' - 12'' pizza - Wed, Thu, Friday only</h3>
-                            <p>Pizza 12 inch + 1 Side Dish + 1,5L Coke Bottle Only From 209,000</p>
-                            <a href="#" class="read-more">Order now</a>
+                            <h3>Khichuri, Polao, Biriyani</h3>
+                            <p>10% off every Friday</p>
+                            <!-- <a href="#" class="read-more">Order now</a> -->
                         </div>
                     </div>
                     <div class="single-promotions">
                         <div class="promotions-img">
-                            <img src="img/promotions/promo_slide_2.jpg" alt="">
+                            <img src="img/promotions/promo_kola_2.jpg" alt="">
                         </div>
                         <div class="promotions-details">
-                            <h3>40% off for 9'' - 12'' pizza - Wed, Thu, Friday only</h3>
-                            <p>Pizza 12 inch + 1 Side Dish + 1,5L Coke Bottle Only From 209,000</p>
-                            <a href="#" class="read-more">Order now</a>
+                            <h3>Samosa/ Singara</h3>
+                            <p>Lip smacking Singara/Samosa.</p>
+                            <!-- <a href="#" class="read-more">Order now</a> -->
                         </div>
                     </div>
                     <div class="single-promotions">
                         <div class="promotions-img">
-                            <img src="img/promotions/promo_slide_3.jpg" alt="">
+                            <img src="img/promotions/promo_kola_3.jpg" alt="">
                         </div>
                         <div class="promotions-details">
-                            <h3>40% off for 9'' - 12'' pizza - Wed, Thu, Friday only</h3>
-                            <p>Pizza 12 inch + 1 Side Dish + 1,5L Coke Bottle Only From 209,000</p>
-                            <a href="#" class="read-more">Order now</a>
+                            <h3>20% off Friday only</h3>
+                            <p>Limited Items only</p>
+                            <!-- <a href="#" class="read-more">Order now</a> -->
                         </div>
                     </div>
                 </div>
@@ -232,8 +300,55 @@
     </section>
     <!--SPEACIAL PROMOTIONS AREA END-->
 
+
     <!--MENUS AREA-->
-    <section class="menus-area section-padding" id="menu">
+    <section class="menus-area section-padding" id="menu" ng-controller="testController">
+        <div class="container wow fadeIn">
+            <div class="row">
+                <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                    <div class="area-title text-center">
+                        <h2>Today’s menu</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
+                    <div class="food-menu-list-menu">
+                        <ul>
+                            <li class="filter active" data-filter="all">All</li>
+                            <li class="filter" data-filter=".breakfast">Breakfast</li>
+                            <li class="filter" data-filter=".lunch">Lunch</li>
+                            <li class="filter" data-filter=".dinner">Dinner</li>
+                            <li class="filter" data-filter=".coffee">Coffe</li>
+                            <li class="filter" data-filter=".snacks">Snacks</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row food-menu-list">
+                <div class="mix col-md-6 col-lg-6 col-sm-12 col-xs-12 single-menu {{val.classes}}" ng-repeat="val in value"
+                    style="display:inline-block;">
+                    <div class="single-menu-details">
+                        <div class="food-menu-img"><img src="img/menu/{{val.img}}" alt=""></div>
+                        <div class="food-menu-details">
+                            <h3>{{val.header}} <span class="menu-price">${{val.price}}</span></h3>
+                            <p class="menu-speacification"><span ng-if="val.para_1.length < 1"></span><span ng-if="val.para_1.length > 0"
+                                    ng-repeat="o in val.para_1 track by $index">-{{o}}</span></p>
+                            <p class="menu-speacification"><span ng-if="val.para_2.length < 1"></span><span ng-if="val.para_2.length > 0"
+                                    ng-repeat="o in val.para_2 track by $index">-{{o}}</span></p>
+                            <p class="menu-speacification"><span ng-if="val.para_3.length < 1"></span><span ng-if="val.para_3.length > 0"
+                                    ng-repeat="o in val.para_3 track by $index">-{{o}}</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--MENUS AREA END-->
+
+
+    <!--MENUS AREA-->
+    <!-- <section class="menus-area section-padding" id="menu">
         <div class="container wow fadeIn">
             <div class="row">
                 <div class="col-md-12 col-lg-12 col-sm-12 col-xs-12">
@@ -259,34 +374,37 @@
             <div class="row food-menu-list">
                 <div class="mix col-md-6 col-lg-6 col-sm-12 col-xs-12 single-menu breakfast coffee snacks">
                     <div class="single-menu-details">
-                        <div class="food-menu-img"><img src="img/menu/menu_1.jpg" alt=""></div>
+                        <div class="food-menu-img"><img src="img/menu/breakfast_buffet_1.jpg" alt=""></div>
                         <div class="food-menu-details">
-                            <h3>Cupcake Recipes <span class="menu-price">$20.00</span></h3>
-                            <p class="menu-speacification"><span>- Juice Fruit</span> <span>- Checken</span> <span>- Cherry</span></p>
-                            <p class="menu-speacification"><span>- Vegetable</span> <span>- Milk</span> <span>- Potato</span></p>
-                            <p class="menu-speacification"><span>- Tomato</span> <span>- Chilli</span> <span>- Sesame</span></p>
+                            <h3>Breakfast Buffet <span class="menu-price">$20.00</span></h3>
+                            <p class="menu-speacification"><span>-Paratha</span> <span>- Alu bhaja</span> <span>- Alu
+                                    Dam</span></p>
+                            <p class="menu-speacification"><span>- Boiled Egg</span> <span>- Egg Omlet</span> <span>-
+                                    Fr Egg w Onion</span></p>
+                            <p class="menu-speacification"><span>- Goat Paya</span> <span>- Beef Paya</span> <span>-
+                                    Fruits</span></p>
                         </div>
                     </div>
                 </div>
-                <div class="mix col-md-6 col-lg-6 col-sm-12 col-xs-12 single-menu dinner snacks">
+                <div class="mix col-md-6 col-lg-6 col-sm-12 col-xs-12 single-menu breakfast dinner lunch">
                     <div class="single-menu-details">
-                        <div class="food-menu-img"><img src="img/menu/menu_2.jpg" alt=""></div>
+                        <div class="food-menu-img"><img src="img/menu/breakfast_lunch_dinner_alu_bhaja.jpg" alt=""></div>
                         <div class="food-menu-details">
-                            <h3>Cupcake Recipes <span class="menu-price">$22.00</span></h3>
-                            <p class="menu-speacification"><span>- Juice Fruit</span> <span>- Checken</span> <span>- Cherry</span></p>
-                            <p class="menu-speacification"><span>- Vegetable</span> <span>- Milk</span> <span>- Potato</span></p>
+                            <h3>Aloo Bhaja <span class="menu-price">$22.00</span></h3>
+                            <p class="menu-speacification"><span>- Potato</span> <span>- Onion</span> <span>- Fry</span></p>
                             <p class="menu-speacification"><span>- Tomato</span> <span>- Chilli</span> <span>- Sesame</span></p>
+                            <p class="menu-speacification"><span></span></p>
                         </div>
                     </div>
                 </div>
                 <div class="mix col-md-6 col-lg-6 col-sm-12 col-xs-12 single-menu breakfast">
                     <div class="single-menu-details">
-                        <div class="food-menu-img"><img src="img/menu/menu_3.jpg" alt=""></div>
+                        <div class="food-menu-img"><img src="img/menu/breakfast_lunch_dinner_alu_bhaja_halwa.jpg" alt=""></div>
                         <div class="food-menu-details">
                             <h3>Cupcake Recipes <span class="menu-price">$17.00</span></h3>
-                            <p class="menu-speacification"><span>- Juice Fruit</span> <span>- Checken</span> <span>- Cherry</span></p>
-                            <p class="menu-speacification"><span>- Vegetable</span> <span>- Milk</span> <span>- Potato</span></p>
+                            <p class="menu-speacification"><span>- Potato</span> <span>- Onion</span> <span>- Fry</span></p>
                             <p class="menu-speacification"><span>- Tomato</span> <span>- Chilli</span> <span>- Sesame</span></p>
+                            <p class="menu-speacification">-Halwa</p>
                         </div>
                     </div>
                 </div>
@@ -295,7 +413,8 @@
                         <div class="food-menu-img"><img src="img/menu/menu_4.jpg" alt=""></div>
                         <div class="food-menu-details">
                             <h3>Cupcake Recipes <span class="menu-price">$28.00</span></h3>
-                            <p class="menu-speacification"><span>- Juice Fruit</span> <span>- Checken</span> <span>- Cherry</span></p>
+                            <p class="menu-speacification"><span>- Juice Fruit</span> <span>- Checken</span> <span>-
+                                    Cherry</span></p>
                             <p class="menu-speacification"><span>- Vegetable</span> <span>- Milk</span> <span>- Potato</span></p>
                             <p class="menu-speacification"><span>- Tomato</span> <span>- Chilli</span> <span>- Sesame</span></p>
                         </div>
@@ -306,7 +425,8 @@
                         <div class="food-menu-img"><img src="img/menu/menu_5.jpg" alt=""></div>
                         <div class="food-menu-details">
                             <h3>Cupcake Recipes <span class="menu-price">$120.00</span></h3>
-                            <p class="menu-speacification"><span>- Juice Fruit</span> <span>- Checken</span> <span>- Cherry</span></p>
+                            <p class="menu-speacification"><span>- Juice Fruit</span> <span>- Checken</span> <span>-
+                                    Cherry</span></p>
                             <p class="menu-speacification"><span>- Vegetable</span> <span>- Milk</span> <span>- Potato</span></p>
                             <p class="menu-speacification"><span>- Tomato</span> <span>- Chilli</span> <span>- Sesame</span></p>
                         </div>
@@ -317,7 +437,8 @@
                         <div class="food-menu-img"><img src="img/menu/menu_6.jpg" alt=""></div>
                         <div class="food-menu-details">
                             <h3>Cupcake Recipes <span class="menu-price">$100.00</span></h3>
-                            <p class="menu-speacification"><span>- Juice Fruit</span> <span>- Checken</span> <span>- Cherry</span></p>
+                            <p class="menu-speacification"><span>- Juice Fruit</span> <span>- Checken</span> <span>-
+                                    Cherry</span></p>
                             <p class="menu-speacification"><span>- Vegetable</span> <span>- Milk</span> <span>- Potato</span></p>
                             <p class="menu-speacification"><span>- Tomato</span> <span>- Chilli</span> <span>- Sesame</span></p>
                         </div>
@@ -325,7 +446,7 @@
                 </div>
             </div>
         </div>
-    </section>
+    </section> -->
     <!--MENUS AREA END-->
 
     <!--RESERVATION BUTTON AREA-->
@@ -347,7 +468,8 @@
                         <div class="modal-dialog" role="document">
                             <div class="modal-content">
                                 <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                                            aria-hidden="true">&times;</span></button>
                                     <h4 class="modal-title">Table Booking Reservation Form</h4>
                                 </div>
                                 <div class="modal-body">
@@ -368,7 +490,8 @@
                                                 </div>
                                                 <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
                                                     <label for="date"><i class="fa fa-calendar"></i></label>
-                                                    <input type="text" name="date" id="date" data-select="datepicker" placeholder="Date...">
+                                                    <input type="text" name="date" id="date" data-select="datepicker"
+                                                        placeholder="Date...">
                                                 </div>
                                                 <div class="col-md-6 col-lg-6 col-sm-6 col-xs-12">
                                                     <label for="time"><i class="fa fa-clock-o"></i></label>
@@ -529,7 +652,8 @@
                         </div>
                         <div class="post-details">
                             <h3><a href="single-blog.html">Recieved first day first reservation</a></h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias itaque eaque deserunt atque laborum ex ad facilis praesentium placeat tenetur.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias itaque eaque deserunt
+                                atque laborum ex ad facilis praesentium placeat tenetur.</p>
                             <p class="post-meta"><a href="#">24 February, 2017</a> - <a href="#">5 Comments</a></p>
                         </div>
                     </div>
@@ -541,7 +665,8 @@
                         </div>
                         <div class="post-details">
                             <h3><a href="single-blog.html">Home to get your home delevery ?</a></h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias itaque eaque deserunt atque laborum ex ad facilis praesentium placeat tenetur.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias itaque eaque deserunt
+                                atque laborum ex ad facilis praesentium placeat tenetur.</p>
                             <p class="post-meta"><a href="#">24 February, 2017</a> - <a href="#">5 Comments</a></p>
                         </div>
                     </div>
@@ -553,7 +678,8 @@
                         </div>
                         <div class="post-details">
                             <h3><a href="single-blog.html">Restaurant welcome day meetup</a></h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias itaque eaque deserunt atque laborum ex ad facilis praesentium placeat tenetur.</p>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias itaque eaque deserunt
+                                atque laborum ex ad facilis praesentium placeat tenetur.</p>
                             <p class="post-meta"><a href="#">24 February, 2017</a> - <a href="#">5 Comments</a></p>
                         </div>
                     </div>
